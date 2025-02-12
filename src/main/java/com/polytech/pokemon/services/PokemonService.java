@@ -1,6 +1,8 @@
 package com.polytech.pokemon.services;
 
 import com.polytech.pokemon.dtos.PokemonDTO;
+import com.polytech.pokemon.entities.Pokemon;
+import com.polytech.pokemon.entities.PokemonSpecies;
 import com.polytech.pokemon.repository.PokemonRepository;
 
 import jakarta.transaction.Transactional;
@@ -28,5 +30,19 @@ public class PokemonService {
     @Transactional
     public void deletePokemonById (Integer id){
         pokemonRepository.deletePokemonById(id);
+    }
+
+    @Transactional
+    public Pokemon addPokemon(PokemonDTO pokemonDTO) {
+        Pokemon pokemon = new Pokemon();
+        pokemon.setId(pokemonDTO.getId());
+        pokemon.setIdentifier(pokemonDTO.getIdentifier());
+        pokemon.setHeight(pokemonDTO.getHeight());
+        pokemon.setWeight(pokemonDTO.getWeight());
+        pokemon.setBase_experience(pokemonDTO.getBaseExperience());
+        pokemon.setOrder(pokemonDTO.getOrder());
+        pokemon.setDefault(pokemonDTO.getDefault());
+
+        return pokemonRepository.save(pokemon);
     }
 }
