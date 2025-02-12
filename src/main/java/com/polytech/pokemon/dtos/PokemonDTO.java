@@ -1,10 +1,10 @@
 package com.polytech.pokemon.dtos;
 
 public class PokemonDTO {
-    private Long id;
+    private Integer id;
     private String identifier;
     private Integer generationId;
-    private Long evolvesFromSpeciesId;
+    private Integer evolvesFromSpeciesId;
     private Integer evolutionChainId;
     private Integer colorId;
     private Integer shapeId;
@@ -24,11 +24,42 @@ public class PokemonDTO {
     private Integer baseExperience;
     private Boolean isDefault;
 
-    public Long getId() {
+    public PokemonDTO(Integer id, String identifier, Integer generationId, Integer evolvesFromSpeciesId,
+                      Integer evolutionChainId, Integer colorId, Integer shapeId, Integer habitatId,
+                      Integer genderRate, Integer captureRate, Integer baseHappiness, Boolean isBaby,
+                      Integer hatchCounter, Boolean hasGenderDifferences, Integer growthRateId,
+                      Boolean formsSwitchable, Integer order, Integer conquestOrder, Integer height,
+                      Integer weight, Integer baseExperience, Boolean isDefault) {
+        this.id = id;
+        this.identifier = identifier;
+        this.generationId = generationId;
+        this.evolvesFromSpeciesId = evolvesFromSpeciesId;
+        this.evolutionChainId = evolutionChainId;
+        this.colorId = colorId;
+        this.shapeId = shapeId;
+        this.habitatId = habitatId;
+        this.genderRate = genderRate;
+        this.captureRate = captureRate;
+        this.baseHappiness = baseHappiness;
+        this.isBaby = isBaby;
+        this.hatchCounter = hatchCounter;
+        this.hasGenderDifferences = hasGenderDifferences;
+        this.growthRateId = growthRateId;
+        this.formsSwitchable = formsSwitchable;
+        this.order = order;
+        this.conquestOrder = conquestOrder;
+        this.height = height;
+        this.weight = weight;
+        this.baseExperience = baseExperience;
+        this.isDefault = isDefault;
+    }
+
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -56,11 +87,11 @@ public class PokemonDTO {
         this.evolutionChainId = evolutionChainId;
     }
 
-    public Long getEvolvesFromSpeciesId() {
+    public Integer getEvolvesFromSpeciesId() {
         return evolvesFromSpeciesId;
     }
 
-    public void setEvolvesFromSpeciesId(Long evolvesFromSpeciesId) {
+    public void setEvolvesFromSpeciesId(Integer evolvesFromSpeciesId) {
         this.evolvesFromSpeciesId = evolvesFromSpeciesId;
     }
 

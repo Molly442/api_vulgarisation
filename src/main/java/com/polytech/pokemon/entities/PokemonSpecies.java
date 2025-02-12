@@ -1,7 +1,10 @@
 package com.polytech.pokemon.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class PokemonSpecies {
@@ -24,5 +27,9 @@ public class PokemonSpecies {
     private int growth_rate_id;
     private boolean forms_switchable;
     private int order;
-    private boolean conquest_order;
+    private Integer conquest_order;
+
+    // Relation OneToMany avec Pokemon
+    @OneToMany(mappedBy = "species") 
+    private List<Pokemon> pokemons; // Un PokemonSpecies peut être associé à plusieurs Pokémon
 }
