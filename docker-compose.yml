@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_USER=nathanarmanet
+      - POSTGRES_PASSWORD=nathanarmanet
+      - POSTGRES_DB=pokemon
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgresql-dump.sql:/docker-entrypoint-initdb.d/postgresql-dump.sql
+    ports:
+      - "5432:5432"
+
+  api:
+    build: .
+    restart: always
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/pokemon
+      SPRING_DATASOURCE_USERNAME: nathanarmanet
+      SPRING_DATASOURCE_PASSWORD: nathanarmanet
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:

@@ -1,61 +1,94 @@
 package com.polytech.pokemon.entities;
 
-import java.util.List;
-
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "pokemon")
 public class Pokemon {
     @Id
-    private int id;
-
+    private Integer id;
+    @Column
     private String identifier;
-    private int height;
-    private int weight;
-    private int base_experience;
-    private int order;
-    private boolean is_default;
-
-    public void setId(int id) { this.id = id; }
-    public void setIdentifier(String identifier) { this.identifier = identifier; }
-    public void setHeight(int height) { this.height = height; }
-    public void setWeight(int weight) { this.weight = weight; }
-    public void setBase_experience(int base_experience) { this.base_experience = base_experience; }
-    public void setOrder(int order) { this.order = order; }
-    public void setDefault(boolean is_default) { this.is_default = is_default; }
-    public void setSpecies(PokemonSpecies species) { this.species = species; }
-
-    public int getId() { return id; }
-    public String getIdentifier() { return identifier; }
-    public int getHeight() { return height; }
-    public int getWeight() { return weight; }
-    public int getBase_experience() { return base_experience; }
-    public int getOrder() { return order; }
-    public boolean isDefault() { return is_default; }
-    public PokemonSpecies getSpecies() { return species; }
+    @ManyToOne
+    @JoinColumn(name = "species_id", referencedColumnName = "id")
+    private PokemonSpecies species;
+    @Column
+    private Integer height;
+    @Column
+    private Integer weight;
+    @Column(name="base_experience")
+    private Integer baseExperience;
+    @Column(name = "`order`")
+    private Integer order;
+    @Column(name = "is_default")
+    private Boolean isDefault;
 
     public Pokemon() {}
 
-    public Pokemon(int id, String identifier, int height, int weight, int base_experience,
-                   int order, boolean is_default, PokemonSpecies species) {
+    public Pokemon(Integer id, String identifier, PokemonSpecies species, Integer height, Integer weight, Integer baseExperience, Integer order, Boolean isDefault) {
         this.id = id;
         this.identifier = identifier;
+        this.species = species;
         this.height = height;
         this.weight = weight;
-        this.base_experience = base_experience;
+        this.baseExperience = baseExperience;
         this.order = order;
-        this.is_default = is_default;
-        this.species = species;
+        this.isDefault = isDefault;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "species_id", referencedColumnName = "id") // Indique la clé étrangère
-    private PokemonSpecies species;  // 🔹 Remplace int species_id par un objet PokemonSpecies
-
-    @OneToMany(mappedBy = "pokemon", cascade = CascadeType.ALL, orphanRemoval = true)
-        private List<PokemonTypes> types;
-
+    // Getters/Setters
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public String getIdentifier() {
+        return identifier;
+    }
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
+    public Integer getHeight() {
+        return height;
+    }
+    public void setHeight(Integer height) {
+        this.height = height;
+    }
+    public Integer getWeight() {
+        return weight;
+    }
+    public void setWeight(Integer weight) {
+        this.weight = weight;
+    }
+    public Integer getBaseExperience() {
+        return baseExperience;
+    }
+    public void setBaseExperience(Integer baseExperience) {
+        this.baseExperience = baseExperience;
+    }
+    public Integer getOrder() {
+        return order;
+    }
+    public void setOrder(Integer order) {
+        this.order = order;
+    }
+    public Boolean getIsDefault() {
+        return isDefault;
+    }
+    public void setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+    }
+    public void setSpecies(PokemonSpecies species) {
+        this.species = species;
+    }
+    public PokemonSpecies getSpecies() {
+        return species;
+    }
+    public Boolean getDefault() {
+        return isDefault;
+    }
+    public void setDefault(Boolean aDefault) {
+        isDefault = aDefault;
+    }
 }
-    
-
-

@@ -3,57 +3,55 @@ package com.polytech.pokemon.dtos;
 public class PokemonDTO {
     private Integer id;
     private String identifier;
-    private Integer generationId;
-    private Integer evolvesFromSpeciesId;
-    private Integer evolutionChainId;
-    private Integer colorId;
-    private Integer shapeId;
-    private Integer habitatId;
-    private Integer genderRate;
-    private Integer captureRate;
-    private Integer baseHappiness;
-    private Boolean isBaby;
-    private Integer hatchCounter;
-    private Boolean hasGenderDifferences;
-    private Integer growthRateId;
-    private Boolean formsSwitchable;
+    private Integer generation_id;
+    private Integer evolves_from_species_id;
+    private Integer evolution_chain_id;
+    private Integer color_id;
+    private Integer shape_id;
+    private Integer habitat_id;
+    private Integer gender_rate;
+    private Integer capture_rate;
+    private Integer base_happiness;
+    private Boolean is_baby;
+    private Integer hatch_counter;
+    private Boolean has_gender_differences;
+    private Integer growth_rate_id;
+    private Boolean forms_switchable;
     private Integer order;
-    private Integer conquestOrder;
+    private Integer conquest_order;
     private Integer height;
     private Integer weight;
-    private Integer baseExperience;
-    private Boolean isDefault;
+    private Integer base_experience;
+    private Boolean is_default;
 
-    public PokemonDTO(Integer id, String identifier, Integer generationId, Integer evolvesFromSpeciesId,
-                      Integer evolutionChainId, Integer colorId, Integer shapeId, Integer habitatId,
-                      Integer genderRate, Integer captureRate, Integer baseHappiness, Boolean isBaby,
-                      Integer hatchCounter, Boolean hasGenderDifferences, Integer growthRateId,
-                      Boolean formsSwitchable, Integer order, Integer conquestOrder, Integer height,
-                      Integer weight, Integer baseExperience, Boolean isDefault) {
-        this.id = id;
-        this.identifier = identifier;
-        this.generationId = generationId;
-        this.evolvesFromSpeciesId = evolvesFromSpeciesId;
-        this.evolutionChainId = evolutionChainId;
-        this.colorId = colorId;
-        this.shapeId = shapeId;
-        this.habitatId = habitatId;
-        this.genderRate = genderRate;
-        this.captureRate = captureRate;
-        this.baseHappiness = baseHappiness;
-        this.isBaby = isBaby;
-        this.hatchCounter = hatchCounter;
-        this.hasGenderDifferences = hasGenderDifferences;
-        this.growthRateId = growthRateId;
-        this.formsSwitchable = formsSwitchable;
-        this.order = order;
-        this.conquestOrder = conquestOrder;
-        this.height = height;
-        this.weight = weight;
-        this.baseExperience = baseExperience;
-        this.isDefault = isDefault;
+
+    public PokemonDTO() {
     }
 
+    public PokemonDTO(Integer id, String identifier, Integer generation_id, Integer evolves_from_species_id, Integer evolution_chain_id, Integer color_id, Integer shape_id, Integer habitat_id, Integer gender_rate, Integer capture_rate, Integer base_happiness, Boolean is_baby, Integer hatch_counter, Boolean has_gender_differences, Integer growth_rate_id, Boolean forms_switchable, Integer order, Integer conquest_order, Integer height, Integer weight, Integer base_experience, Boolean is_default) {
+        this.id = id;
+        this.identifier = identifier;
+        this.generation_id = generation_id;
+        this.evolves_from_species_id = evolves_from_species_id;
+        this.evolution_chain_id = evolution_chain_id;
+        this.color_id = color_id;
+        this.shape_id = shape_id;
+        this.habitat_id = habitat_id;
+        this.gender_rate = gender_rate;
+        this.capture_rate = capture_rate;
+        this.base_happiness = base_happiness;
+        this.is_baby = is_baby;
+        this.hatch_counter = hatch_counter;
+        this.has_gender_differences = has_gender_differences;
+        this.growth_rate_id = growth_rate_id;
+        this.forms_switchable = forms_switchable;
+        this.order = order;
+        this.conquest_order = conquest_order;
+        this.height = height;
+        this.weight = weight;
+        this.base_experience = base_experience;
+        this.is_default = is_default;
+    }
 
     public Integer getId() {
         return id;
@@ -71,116 +69,116 @@ public class PokemonDTO {
         this.identifier = identifier;
     }
 
-    public Integer getGenerationId() {
-        return generationId;
+    public Integer getGeneration_id() {
+        return generation_id;
     }
 
-    public void setGenerationId(Integer generationId) {
-        this.generationId = generationId;
+    public void setGeneration_id(Integer generation_id) {
+        this.generation_id = generation_id;
     }
 
-    public Integer getEvolutionChainId() {
-        return evolutionChainId;
+    public Integer getEvolves_from_species_id() {
+        return evolves_from_species_id;
     }
 
-    public void setEvolutionChainId(Integer evolutionChainId) {
-        this.evolutionChainId = evolutionChainId;
+    public void setEvolves_from_species_id(Integer evolves_from_species_id) {
+        this.evolves_from_species_id = evolves_from_species_id;
     }
 
-    public Integer getEvolvesFromSpeciesId() {
-        return evolvesFromSpeciesId;
+    public Integer getEvolution_chain_id() {
+        return evolution_chain_id;
     }
 
-    public void setEvolvesFromSpeciesId(Integer evolvesFromSpeciesId) {
-        this.evolvesFromSpeciesId = evolvesFromSpeciesId;
+    public void setEvolution_chain_id(Integer evolution_chain_id) {
+        this.evolution_chain_id = evolution_chain_id;
     }
 
-    public Integer getColorId() {
-        return colorId;
+    public Integer getColor_id() {
+        return color_id;
     }
 
-    public void setColorId(Integer colorId) {
-        this.colorId = colorId;
+    public void setColor_id(Integer color_id) {
+        this.color_id = color_id;
     }
 
-    public Integer getShapeId() {
-        return shapeId;
+    public Integer getShape_id() {
+        return shape_id;
     }
 
-    public void setShapeId(Integer shapeId) {
-        this.shapeId = shapeId;
+    public void setShape_id(Integer shape_id) {
+        this.shape_id = shape_id;
     }
 
-    public Integer getGenderRate() {
-        return genderRate;
+    public Integer getHabitat_id() {
+        return habitat_id;
     }
 
-    public void setGenderRate(Integer genderRate) {
-        this.genderRate = genderRate;
+    public void setHabitat_id(Integer habitat_id) {
+        this.habitat_id = habitat_id;
     }
 
-    public Integer getHabitatId() {
-        return habitatId;
+    public Integer getGender_rate() {
+        return gender_rate;
     }
 
-    public void setHabitatId(Integer habitatId) {
-        this.habitatId = habitatId;
+    public void setGender_rate(Integer gender_rate) {
+        this.gender_rate = gender_rate;
     }
 
-    public Integer getCaptureRate() {
-        return captureRate;
+    public Integer getCapture_rate() {
+        return capture_rate;
     }
 
-    public void setCaptureRate(Integer captureRate) {
-        this.captureRate = captureRate;
+    public void setCapture_rate(Integer capture_rate) {
+        this.capture_rate = capture_rate;
     }
 
-    public Integer getBaseHappiness() {
-        return baseHappiness;
+    public Integer getBase_happiness() {
+        return base_happiness;
     }
 
-    public void setBaseHappiness(Integer baseHappiness) {
-        this.baseHappiness = baseHappiness;
+    public void setBase_happiness(Integer base_happiness) {
+        this.base_happiness = base_happiness;
     }
 
-    public Boolean getBaby() {
-        return isBaby;
+    public Boolean getIs_baby() {
+        return is_baby;
     }
 
-    public void setBaby(Boolean baby) {
-        isBaby = baby;
+    public void setIs_baby(Boolean is_baby) {
+        this.is_baby = is_baby;
     }
 
-    public Integer getHatchCounter() {
-        return hatchCounter;
+    public Integer getHatch_counter() {
+        return hatch_counter;
     }
 
-    public void setHatchCounter(Integer hatchCounter) {
-        this.hatchCounter = hatchCounter;
+    public void setHatch_counter(Integer hatch_counter) {
+        this.hatch_counter = hatch_counter;
     }
 
-    public Boolean getHasGenderDifferences() {
-        return hasGenderDifferences;
+    public Boolean getHas_gender_differences() {
+        return has_gender_differences;
     }
 
-    public void setHasGenderDifferences(Boolean hasGenderDifferences) {
-        this.hasGenderDifferences = hasGenderDifferences;
+    public void setHas_gender_differences(Boolean has_gender_differences) {
+        this.has_gender_differences = has_gender_differences;
     }
 
-    public Integer getGrowthRateId() {
-        return growthRateId;
+    public Integer getGrowth_rate_id() {
+        return growth_rate_id;
     }
 
-    public void setGrowthRateId(Integer growthRateId) {
-        this.growthRateId = growthRateId;
+    public void setGrowth_rate_id(Integer growth_rate_id) {
+        this.growth_rate_id = growth_rate_id;
     }
 
-    public Boolean getFormsSwitchable() {
-        return formsSwitchable;
+    public Boolean getForms_switchable() {
+        return forms_switchable;
     }
 
-    public void setFormsSwitchable(Boolean formsSwitchable) {
-        this.formsSwitchable = formsSwitchable;
+    public void setForms_switchable(Boolean forms_switchable) {
+        this.forms_switchable = forms_switchable;
     }
 
     public Integer getOrder() {
@@ -191,12 +189,12 @@ public class PokemonDTO {
         this.order = order;
     }
 
-    public Integer getConquestOrder() {
-        return conquestOrder;
+    public Integer getConquest_order() {
+        return conquest_order;
     }
 
-    public void setConquestOrder(Integer conquestOrder) {
-        this.conquestOrder = conquestOrder;
+    public void setConquest_order(Integer conquest_order) {
+        this.conquest_order = conquest_order;
     }
 
     public Integer getHeight() {
@@ -207,14 +205,6 @@ public class PokemonDTO {
         this.height = height;
     }
 
-    public Integer getBaseExperience() {
-        return baseExperience;
-    }
-
-    public void setBaseExperience(Integer baseExperience) {
-        this.baseExperience = baseExperience;
-    }
-
     public Integer getWeight() {
         return weight;
     }
@@ -223,12 +213,19 @@ public class PokemonDTO {
         this.weight = weight;
     }
 
-    public Boolean getDefault() {
-        return isDefault;
+    public Integer getBase_experience() {
+        return base_experience;
     }
 
-    public void setDefault(Boolean aDefault) {
-        isDefault = aDefault;
+    public void setBase_experience(Integer base_experience) {
+        this.base_experience = base_experience;
+    }
+
+    public Boolean getIs_default() {
+        return is_default;
+    }
+
+    public void setIs_default(Boolean is_default) {
+        this.is_default = is_default;
     }
 }
-
